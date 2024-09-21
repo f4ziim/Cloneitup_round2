@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+    
+  }
+
+  .sidebar {
+    height: 180vh;
+    width: 80px;
+    background-color: #1C1C1C; /* Dark background */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 50px;
+  }
+
+  .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter:brightness(2);
+    transition: transform 0.3s ease; 
+  }
+  .logo:hover img{
+    transform: rotate(180deg); /* Rotate logo 180 degrees on hover */
+  }
+    /* Responsive styles for larger screens */
+    @media (min-width: 1440px) {
+        .sidebar {
+          width: 100px; /* Increase sidebar width */
+          padding: 30px 0;
+        }}
+
+  .nav-links {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+  }
+
+  .nav-links li {
+    margin: 40px 0;
+    text-align: center;
+  }
+
+  .nav-links a {
+    position: relative; /* Ensure relative positioning for absolute elements */
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+  }
+
+  .nav-links img {
+    width: 30px;
+    height: 30px;
+    margin-left: 15px;
+    filter:brightness(2); 
+    transition: transform 0.3s ease;
+  }
+  /* Hover effect for links: scale icon and show white circular border */
+  .nav-links a:hover {
+    transform: scale(1.1); /* Slightly scale the entire link */
+  }
+  
+  .nav-links a:hover::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding-right: 30px;
+    width: 40px; /* Adjust size to fit icon */
+    height: 40px; /* Adjust size to fit icon */
+    border: 1px solid white; /* White circular border */
+    border-radius: 50%; /* Make the border circular */
+    transform: translate(-50%, -50%); /* Center the circle */
+    transition: all 0.3s ease; /* Smooth border effect */
+    z-index: -1; /* Place the border behind the icon */
+  }
+
+  
+  /* Styles for even larger screens (up to 2160px) */
+  @media (min-width: 1920px) {
+    .sidebar {
+      width: 120px; /* Further increase sidebar width */
+      padding: 40px 0;
+    }}
+    @media (min-width: 1440px) {
+        .header-left h1 {
+          font-size: 2.5rem; /* Adjust size for larger screens */
+        }
+        
+        .header-right .profile span {
+          font-size: 1.25rem; /* Adjust size for larger screens */
+        }
+      
+        .header-right img {
+          width: 50px; /* Larger profile picture */
+          height: 50px;
+        }
+      }
+      
+      @media (min-width: 1920px) {
+        .header-left h1 {
+          font-size: 3rem; /* Further adjust size for even larger screens */
+        }
+        
+        .header-right .profile span {
+          font-size: 1.5rem; /* Larger font for name */
+        }
+        
+        .header-right img {
+          width: 60px; /* Even larger profile picture */
+          height: 60px;
+        }
+      }
+    
+       /* Custom hover effect on the image */
+       .hover-image:hover {
+        transform: scale(1.1);
+    }
+    .image-hover:hover {
+        filter: brightness(0) saturate(100%) invert(77%) sepia(28%) saturate(3834%) hue-rotate(171deg) brightness(100%) contrast(97%);
+    }

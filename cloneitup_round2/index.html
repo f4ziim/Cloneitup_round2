@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                ash:'#868686',
+              }
+            }
+          }
+        }
+      </script>
+        <style type="text/tailwindcss">
+            @layer utilities {
+              .content-auto {
+                content-visibility: auto;
+              }
+            }
+          </style>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+</head>
+<body class="bg-gray-100">
+    <!-- Sidebar --> 
+   
+    <div class="sidebar float-left">
+        <!-- Sidebar Logo -->
+        <div class="logo">
+          <img src="images/State=Default.png" alt="Logo">
+        </div>
+    
+        <!-- Navigation Links with Images -->
+        <ul class="nav-links">
+          <li><a href="#"><img src="images/team_dashboard.png" alt="Home"></a></li>
+          <li><a href="#"><img src="images/draft.png" alt="Profile"></a></li>
+          <li><a href="#"><img src="images/calendar_month.png" alt="Documents"></a></li>
+          <li><a href="#"><img src="images/folder.png" alt="Calendar"></a></li>
+          <li><a href="#"><img src="images/chat.png" alt="chat"></a></li>
+          <li><a href="#"><img src="images/brightness_empty.png" alt="icon"></a></li>
+          <li class="pt-[50px]"><a href="#"><img src="images/logout.png" alt="icon"></a></li>
+          
+        </ul>
+      </div>
+    <!-- header -->
+    <header class="flex justify-between items-center p-4 bg-white w-auto">
+        <div class="header-left">
+          <h1 class="text-3xl font-bold text-black">Courses</h1>
+        </div>
+        <div class="header-right flex items-center">
+          <div class="profile flex items-center">
+            <span class="mr-3 text-gray-800 text-md font-bold">Rajalekshmi Muthupandiya</span>
+            <img src="images/avatar-05.png" alt="Profile Picture" class="w-10 h-10 rounded-full mr-3">
+            
+            <div class="relative">
+              <button id="dropdown-button" class="bg-transparent text-gray-600 focus:outline-none">
+                ▼
+              </button>
+              <div id="dropdown-content" class="absolute right-0 mt-2 w-40 bg-white text-black rounded-md shadow-lg hidden">
+                <a href="#" class="block px-4 py-2 hover:bg-gray-200">Profile</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-200">Settings</a>
+                <a href="#" class="block px-4 py-2 hover:bg-gray-200">Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+       <!-- Centered Navbar -->
+       <div class="w-full lg:w-[71%] text-center  h-[100px] border ">
+        <nav class="">
+            <ul class="flex justify-center space-x-10 text-lg">
+                <li class="mt-[30px]"><a href="#" class="text-gray-600 hover:text-purple-600 border-b-2  border-transparent hover:border-purple-600 transition">All</a></li>
+                <li class="mt-[30px]" ><a href="#" class="text-gray-600 hover:text-purple-600 border-b-2 border-transparent hover:border-purple-600 transition">Advertising</a></li>
+                <li class="mt-[30px]" ><a href="#" class="text-gray-600 hover:text-purple-600 border-b-2 border-transparent hover:border-purple-600 transition">Design</a></li>
+                <li class="mt-[30px]" ><a href="#" class="text-gray-600 hover:text-purple-600 border-b-2 border-transparent hover:border-purple-600 transition">Marketing</a></li>
+                <li class="mt-[30px]" ><a href="#" class="text-gray-600 hover:text-purple-600 border-b-2 border-transparent hover:border-purple-600 transition">Illustration</a></li>
+                <li class="mt-[30px]" ><a href="#" class="text-gray-600 hover:text-purple-600 border-b-2 border-transparent hover:border-purple-600 transition">Brand</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Right space for calendar or other content -->
+    <div class="hidden lg:block lg:w-1/10">
+        <!-- Add any elements like calendar here -->
+    </div>
+    <div class="container mx-auto px-4 py-6 w-[68%] mr-[400px] ">
+        <!-- Card Structure -->
+        <div class="bg-white rounded-xl shadow-lg p-6 flex items-center space-x-6">
+           <!-- Image Section with Gradient Background -->
+<div class="relative w-[200px] h-[200px] rounded-md overflow-hidden flex items-center justify-center" style="background: linear-gradient(90deg, #F04729 50%, #FE6A30 50%);">
+    <!-- Image with hover effect -->
+    <img src="images/html.png" alt="HTML for beginners" class="w-[100px] h-[100px] object-cover hover-image transition-transform duration-300 ease-in-out rounded-md">
+    <!-- Price tag -->
+    <div class="absolute top-2 left-2 bg-white-800 text-white text-sm font-bold px-2 py-1 rounded">₹16000</div>
+    <!-- Date tag -->
+    <div class="absolute bottom-2 left-2 bg-white text-black text-xs px-2 py-1 rounded" style="border-radius: 10px;">14 JUL - 17 AUG</div>
+</div>
+
+            <!-- Content Section -->
+            <div class="w-2/3">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h2 class="text-xl font-semibold">HTML for beginners</h2>
+                        <p class="text-gray-500 mt-1">Learning HTML for developing modern interactive web applications.</p>
+                    </div>
+                    <!-- Rating -->
+                    <div class="flex items-center space-x-1 text-yellow-400">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.396.21-.862-.149-.746-.592l.83-4.73L.173 6.765c-.329-.32-.158-.888.283-.95l4.898-.696L7.538.792c.197-.399.73-.399.927 0l2.184 4.327 4.898.696c.441.062.612.63.283.95l-3.523 3.356.83 4.73c.116.443-.35.802-.746.592L8 13.187l-4.389 2.256z"/>
+                        </svg>
+                        <span class="text-lg text-black font-semibold">4.5</span>
+                    </div>
+                </div>
+                
+                <!-- Tag Section -->
+                <div class="flex space-x-2 mt-[44px]">
+                    <span class="border border-black rounded-md px-3 py-1 text-xl hover:border-blue-600">HTML</span>
+                    <span class="border border-black rounded-md px-3 py-1 text-xl hover:border-blue-600">Web</span>
+                </div>
+
+                <!-- Action Button -->
+                <div class="mt-4 flex justify-end">
+                    <button class="bg-blue-600 text-white rounded-full p-3 border-2 border-transparent hover:border-blue-600 transition-all duration-300 ease-in-out">
+                        <img src="images/arrow_forward.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto px-4 py-6 w-[68%] mr-[400px] ">
+        <!-- Card 2-->
+        <div class="bg-white rounded-xl shadow-lg p-6 flex items-center space-x-6">
+           <!-- Image Section with Gradient Background -->
+<div class="relative w-[200px] h-[200px] rounded-md overflow-hidden flex items-center justify-center" style="background: linear-gradient(90deg, #2948F1 50%, #457DFE 50%);">
+    <!-- Image with hover effect -->
+    <img src="images/css.png" alt="HTML for beginners" class="w-[100px] h-[100px] object-cover hover-image transition-transform duration-300 ease-in-out rounded-md">
+    <!-- Price tag -->
+    <div class="absolute top-2 left-2 bg-white-800 text-white text-sm font-bold px-2 py-1 rounded">₹12000</div>
+    <!-- Date tag -->
+    <div class="absolute bottom-2 left-2 bg-white text-black text-xs px-2 py-1 rounded" style="border-radius: 10px;">14 JUL - 17 AUG</div>
+</div>
+
+            <!-- Content Section -->
+            <div class="w-2/3">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h2 class="text-xl font-semibold">HTML for beginners</h2>
+                        <p class="text-gray-500 mt-1">Learning HTML for developing modern interactive web applications.</p>
+                    </div>
+                    <!-- Rating -->
+                    <div class="flex items-center space-x-1 text-yellow-400">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.396.21-.862-.149-.746-.592l.83-4.73L.173 6.765c-.329-.32-.158-.888.283-.95l4.898-.696L7.538.792c.197-.399.73-.399.927 0l2.184 4.327 4.898.696c.441.062.612.63.283.95l-3.523 3.356.83 4.73c.116.443-.35.802-.746.592L8 13.187l-4.389 2.256z"/>
+                        </svg>
+                        <span class="text-lg text-black font-semibold">4.3</span>
+                    </div>
+                </div>
+                
+                <!-- Tag Section -->
+                <div class="flex space-x-2 mt-[44px]">
+                    <span class="border border-black rounded-md px-3 py-1 text-xl hover:border-blue-600">ENGINEERING</span>
+                    <span class="border border-black rounded-md px-3 py-1 text-xl hover:border-blue-600">TESTING</span>
+                </div>
+
+                <!-- Action Button -->
+                <div class="mt-4 flex justify-end">
+                    <button class="bg-blue-600 text-white rounded-full p-3 border-2 border-transparent hover:border-blue-600 transition-all duration-300 ease-in-out">
+                        <img src="images/arrow_forward.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container mx-auto px-4 py-6 w-[68%] mr-[400px]">
+        <!-- Card Structure -->
+        <div class="bg-white rounded-xl shadow-lg p-6 flex items-center space-x-6">
+           <!-- Image Section with Gradient Background -->
+<div class="relative w-[200px] h-[200px] rounded-md overflow-hidden flex items-center justify-center" style="background: linear-gradient(90deg, #FDEA31 50%, #2D2D2D 50%);">
+    <!-- Image with hover effect -->
+    <img src="images/javascript.png" alt="HTML for beginners" class="w-[100px] h-[100px] object-cover hover-image transition-transform duration-300 ease-in-out rounded-md">
+    <!-- Price tag -->
+    <div class="absolute top-2 left-2 bg-white-800 text-white text-sm font-bold px-2 py-1 rounded">₹17000</div>
+    <!-- Date tag -->
+    <div class="absolute bottom-2 left-2 bg-white text-black text-xs px-2 py-1 rounded" style="border-radius: 10px;">14 JUL - 17 AUG</div>
+</div>
+
+            <!-- Content Section -->
+            <div class="w-2/3">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h2 class="text-xl font-semibold">HTML for beginners</h2>
+                        <p class="text-gray-500 mt-1">Learning HTML for developing modern interactive web applications.</p>
+                    </div>
+                    <!-- Rating -->
+                    <div class="flex items-center space-x-1 text-yellow-400">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5" viewBox="0 0 16 16">
+                            <path d="M3.612 15.443c-.396.21-.862-.149-.746-.592l.83-4.73L.173 6.765c-.329-.32-.158-.888.283-.95l4.898-.696L7.538.792c.197-.399.73-.399.927 0l2.184 4.327 4.898.696c.441.062.612.63.283.95l-3.523 3.356.83 4.73c.116.443-.35.802-.746.592L8 13.187l-4.389 2.256z"/>
+                        </svg>
+                        <span class="text-lg text-black font-semibold">4.7</span>
+                    </div>
+                </div>
+                
+                <!-- Tag Section -->
+                <div class="flex space-x-2 mt-[44px]">
+                    <span class="border border-black rounded-md px-3 py-1 text-xl hover:border-blue-600">Javascript</span>
+                    <span class="border border-black rounded-md px-3 py-1 text-xl hover:border-blue-600">Development</span>
+                </div>
+
+                <!-- Action Button -->
+                <div class="mt-4 flex justify-end">
+                    <button class="bg-blue-600 text-white rounded-full p-3 border-2 border-transparent hover:border-blue-600 transition-all duration-300 ease-in-out">
+                        <img src="images/arrow_forward.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="w-[374px] p-4 bg-gray-100 rounded-lg float-right mt-[-1075px] border" >
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-bold">July 2024</h2>
+            <a href="#" class="text-sm "> <img src="images/Link.png" alt="" class="image-hover"></a>
+        </div>
+        <div class="grid grid-cols-7 text-center text-black mb-5">
+            <div class="p-2 hover:border hover:border-indigo-600 rounded-full day-selector">
+                <span>SUN</span><br>
+                <span class="text-black">12</span>
+            </div>
+            <div class="p-2 hover:border hover:border-indigo-600 rounded-full day-selector">
+                <span>MON</span><br>
+                <span class="text-black">13</span>
+            </div>
+            <div class="p-2 hover:border hover:border-indigo-600 rounded-full day-selector">
+                <span>TUE</span><br>
+                <span class="text-black">14</span>
+            </div>
+            <div class="p-2 hover:border hover:border-indigo-600 rounded-full day-selector">
+                <span>WED</span><br>
+                <span class="text-black">15</span>
+            </div>
+            <div class="p-2 hover:border hover:border-indigo-600 rounded-full day-selector">
+                <span>THU</span><br>
+                <span class="text-black">16</span>
+            </div>
+            <div class="p-2 hover:border hover:border-indigo-600 rounded-full day-selector">
+                <span>FRI</span><br>
+                <span class="text-black">17</span>
+            </div>
+            <div class="p-2 hover:border hover:border-indigo-600 rounded-full day-selector">
+                <span>SAT</span><br>
+                <span class="text-black">18</span>
+            </div>
+        </div>
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-xl font-bold">Mentors</h2>
+            <a href="#" class="text-blue-600 font-medium text-lg flex items-center space-x-1 hover:text-[#61B0FB] ">
+                <span>See all</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a1 1 0 001.707.707l7-7a1 1 0 000-1.414l-7-7A1 1 0 0010 4v4H3a1 1 0 000 2h7v4a1 1 0 000 2H3a1 1 0 000 2h7v4z" clip-rule="evenodd" />
+                </svg>
+            </a>
+            
+        </div>
+        <div class="flex items-center p-4 bg-white">
+            <img src="images/avatar-04.png" alt="Profile Photo" class="w-16 h-16 rounded-full mr-4">
+            <div>
+                <div class="flex items-baseline">
+                    <h2 class="text-xl font-semibold mr-2">Jhon Wilson</h2>
+                    <p class="text-gray-600">Exp. 6 yr.</p>
+                </div>
+                <p class="text-gray-500">Profession: UI / UX Designer</p>
+            </div>
+        </div>
+        <div class="flex items-center p-4 bg-white">
+            <img src="images/avatar-03.png" alt="Profile Photo" class="w-16 h-16 rounded-full mr-4">
+            <div>
+                <div class="flex items-baseline">
+                    <h2 class="text-xl font-semibold mr-2">Daniel Hill</h2>
+                    <p class="text-gray-600">Exp. 5 yr.</p>
+                </div>
+                <p class="text-gray-500">Test Engineer</p>
+            </div>
+        </div>
+        <div class="flex items-center p-4 bg-white">
+            <img src="images/avatar-02.png" alt="Profile Photo" class="w-16 h-16 rounded-full mr-4">
+            <div>
+                <div class="flex items-baseline">
+                    <h2 class="text-xl font-semibold mr-2">Sofia Harris</h2>
+                    <p class="text-gray-600">Exp. 8 yr.</p>
+                </div>
+                <p class="text-gray-500">Python Developer</p>
+            </div>
+        </div>
+        <div class="flex items-center p-4 bg-white">
+            <img src="images/avatar-01.png" alt="Profile Photo" class="w-16 h-16 rounded-full mr-4">
+            <div>
+                <div class="flex items-baseline">
+                    <h2 class="text-xl font-semibold mr-2">Jhon Wilson</h2>
+                    <p class="text-gray-600">Exp. 4 yr.</p>
+                </div>
+                <p class="text-gray-500">Motion Designer</p>
+            </div>
+        </div>
+        <div class="flex justify-between items-center mb-4 mt-4">
+            <h2 class="text-xl font-bold">Learning Process</h2>
+            <a href="#" class="text-blue-600 font-medium text-lg flex items-center space-x-1 hover:text-[#61B0FB] ">
+                <span>See all</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 18a1 1 0 001.707.707l7-7a1 1 0 000-1.414l-7-7A1 1 0 0010 4v4H3a1 1 0 000 2h7v4a1 1 0 000 2H3a1 1 0 000 2h7v4z" clip-rule="evenodd" />
+                </svg>
+            </a>
+            
+        </div>
+        <div class="flex flex-col items-start p-4 bg-white">
+            <div class="flex justify-between w-full mb-1 font-bold">
+                <span>Python Developer</span>
+                <span>80%</span>
+            </div>
+            <div class="w-full bg-gray-300 rounded h-4">
+                <div class="bg-[#61B0FB] h-full rounded" style="width: 80%;"></div>
+            </div>
+        </div>
+        <div class="flex flex-col items-start p-4 bg-white">
+            <div class="flex justify-between w-full mb-1 font-bold">
+                <span>Test Engineer</span>
+                <span>80%</span>
+            </div>
+            <div class="w-full bg-gray-300 rounded h-4">
+                <div class="bg-[#78C634] h-full rounded" style="width: 56%;"></div>
+            </div>
+        </div>
+        
+     
+        
+    </div> 
+      
+    
+    
+    
+
+
+
+
+
+
+
+    <script src="sidebar.js"></script>
+    <script src="header.js"></script>
+    <script src="calendar.js"></script>
+</body>
+</html>
